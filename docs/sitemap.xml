@@ -1,0 +1,20 @@
+<urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
+<url><loc>/404.html</loc></url>
+<url><loc>/LICENSE-text.html</loc></url>
+<url><loc>/LICENSE.html</loc></url>
+<url><loc>/articles/index.html</loc></url>
+<url><loc>/articles/tlsR-workflow.html</loc></url>
+<url><loc>/authors.html</loc></url>
+<url><loc>/index.html</loc></url>
+<url><loc>/news/index.html</loc></url>
+<url><loc>/reference/calc_icat.html</loc></url>
+<url><loc>/reference/detect_TLS.html</loc></url>
+<url><loc>/reference/detect_tic.html</loc></url>
+<url><loc>/reference/index.html</loc></url>
+<url><loc>/reference/plot_TLS.html</loc></url>
+<url><loc>/reference/scan_clustering.html</loc></url>
+<url><loc>/reference/summarize_TLS.html</loc></url>
+<url><loc>/reference/tlsR-package.html</loc></url>
+<url><loc>/reference/toy_ldata.html</loc></url>
+</urlset>
+
