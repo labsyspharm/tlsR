@@ -1,0 +1,122 @@
+# tlsR ![](reference/figures/logo.png)
+
+**tlsR** provides fast, reproducible detection and spatial analysis of
+Tertiary Lymphoid Structures (TLS) in multiplexed tissue imaging data
+(mIHC, CODEX, IMC, etc.).
+
+## Installation
+
+``` r
+# Stable release from CRAN
+install.packages("tlsR")
+
+# Development version from GitHub
+# install.packages("remotes")
+remotes::install_github("amiryousefi/tlsR")
+```
+
+## Quick start
+
+``` r
+library(tlsR)
+
+data(toy_ldata)
+
+# 1. Detect TLS
+ldata <- detect_TLS("ToySample", k = 30, ldata = toy_ldata)
+
+# 2. Score each TLS with ICAT
+calc_icat("ToySample", tlsID = 1, ldata = ldata)
+
+# 3. Detect T-cell clusters outside TLS
+ldata <- detect_tic("ToySample", ldata = ldata)
+
+# 4. Tidy summary table
+summarize_TLS(ldata)
+
+# 5. Spatial plot
+plot_TLS("ToySample", ldata = ldata)
+```
+
+## Data format
+
+`ldata` is a **named list of data frames**, one per sample, each with
+columns:
+
+| Column      | Type      | Description                      |
+|-------------|-----------|----------------------------------|
+| `x`         | numeric   | X coordinate (microns)           |
+| `y`         | numeric   | Y coordinate (microns)           |
+| `phenotype` | character | `"B cell"`, `"T cell"`, or other |
+
+## Citation
+
+Amiryousefi et al. (2025). *Detection and spatial analysis of tertiary
+lymphoid structures in multiplexed tissue imaging.*
+<https://doi.org/10.1101/2025.09.21.677465>
+
+## License
+
+MIT © Ali Amiryousefi
+
+# Package index
+
+## TLS Detection
+
+Identify tertiary lymphoid structures in spatial imaging data.
+
+- [`detect_TLS()`](https://amiryousefilab.github.io/tlsR/reference/detect_TLS.md)
+  : Detect Tertiary Lymphoid Structures using a KNN-density approach
+
+## T-cell Clusters
+
+Detect tumour-infiltrating T-cell clusters outside TLS.
+
+- [`detect_tic()`](https://amiryousefilab.github.io/tlsR/reference/detect_tic.md)
+  : Detect T-cell Immune Clusters (TIC) on the Tissue
+
+## Spatial Scanning
+
+Sliding-window Ripley’s L clustering map.
+
+- [`scan_clustering()`](https://amiryousefilab.github.io/tlsR/reference/scan_clustering.md)
+  : Scan Tissue for Local Immune Cell Clustering (Ripley's L Heatmap)
+
+## Characterisation
+
+Score and summarise detected structures.
+
+- [`calc_icat()`](https://amiryousefilab.github.io/tlsR/reference/calc_icat.md)
+  : Calculate ICAT (Independent Component Analysis Trace) Index for TLS
+- [`summarize_TLS()`](https://amiryousefilab.github.io/tlsR/reference/summarize_TLS.md)
+  : Summarize Detected TLS Across Samples
+
+## Visualisation
+
+Publication-ready spatial plots.
+
+- [`plot_TLS()`](https://amiryousefilab.github.io/tlsR/reference/plot_TLS.md)
+  : Plot Spatial Map of TLS and T-cell Clusters
+
+## Data
+
+Built-in example dataset.
+
+- [`toy_ldata`](https://amiryousefilab.github.io/tlsR/reference/toy_ldata.md)
+  : Toy Multiplexed Imaging Data
+
+## Package
+
+Package-level documentation.
+
+- [`tlsR-package`](https://amiryousefilab.github.io/tlsR/reference/tlsR-package.md)
+  [`tlsR`](https://amiryousefilab.github.io/tlsR/reference/tlsR-package.md)
+  : tlsR: Detection and Spatial Analysis of Tertiary Lymphoid Structures
+
+# Articles
+
+### All vignettes
+
+- [tlsR Workflow: From Quntified Cell Feature Table of the Imaging Data
+  to TLS
+  Characterisation](https://amiryousefilab.github.io/tlsR/articles/tlsR-workflow.md):
