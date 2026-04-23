@@ -1,4 +1,4 @@
-# tlsR ![](reference/figures/logo.png)
+# tlsR
 
 **tlsR** provides fast, reproducible detection and spatial analysis of
 Tertiary Lymphoid Structures (TLS) in multiplexed tissue imaging data

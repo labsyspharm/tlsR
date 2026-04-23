@@ -3,7 +3,7 @@ pkgdown: 2.2.0
 pkgdown_sha: ~
 articles:
   tlsR-workflow: tlsR-workflow.html
-last_built: 2026-04-18T00:35Z
+last_built: 2026-04-23T17:39Z
 urls:
   reference: https://amiryousefilab.github.io/tlsR/reference
   article: https://amiryousefilab.github.io/tlsR/articles

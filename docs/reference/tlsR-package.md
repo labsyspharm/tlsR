@@ -44,7 +44,7 @@ Amiryousefi et al. (2025)
 
 Useful links:
 
-- <https://github.com/labsyspharm/tlsR>
+- <https://github.com/AmiryousefiLab/tlsR>
 
 ## Author
 
