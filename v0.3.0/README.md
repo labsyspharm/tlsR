@@ -17,7 +17,7 @@ install.packages("tlsR")
 
 # Development version from GitHub
 # install.packages("remotes")
-remotes::install_github("amiryousefi/tlsR")
+remotes::install_github("https://github.com/labsyspharm/tlsR/")
 ```
 
 ## Quick start
